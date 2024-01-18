@@ -1,6 +1,6 @@
-package interfaces.org.crudrepositorio.repositorio;
+package org.gabyproject.interfaces.crudrepositorio.repositorio;
 
-import interfaces.org.crudrepositorio.model.Cliente;
+import org.gabyproject.interfaces.crudrepositorio.model.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

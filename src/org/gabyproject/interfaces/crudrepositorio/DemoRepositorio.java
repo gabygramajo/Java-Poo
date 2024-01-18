@@ -1,7 +1,9 @@
-package interfaces.org.crudrepositorio;
+package org.gabyproject.interfaces.crudrepositorio;
 
-import interfaces.org.crudrepositorio.model.Cliente;
-import interfaces.org.crudrepositorio.repositorio.*;
+import org.gabyproject.interfaces.crudrepositorio.model.Cliente;
+import org.gabyproject.interfaces.crudrepositorio.repositorio.ClienteListRepositorio;
+import org.gabyproject.interfaces.crudrepositorio.repositorio.OrdenablePaginableCrudRepositorio;
+import org.gabyproject.interfaces.crudrepositorio.repositorio.Direccion;
 
 import java.util.List;
 

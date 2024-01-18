@@ -1,6 +1,9 @@
-package org.gabyproject.appfacturas;
+package org.gabyproject.poo.appfacturas;
 
-import org.gabyproject.appfacturas.model.*;
+import org.gabyproject.poo.appfacturas.model.Cliente;
+import org.gabyproject.poo.appfacturas.model.Factura;
+import org.gabyproject.poo.appfacturas.model.ItemFactura;
+import org.gabyproject.poo.appfacturas.model.Producto;
 
 import java.util.Scanner;
 

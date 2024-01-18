@@ -1,4 +1,4 @@
-package org.gabyproject.appfacturas.model;
+package org.gabyproject.poo.appfacturas.model;
 
 public class Producto {
     private int codigo;

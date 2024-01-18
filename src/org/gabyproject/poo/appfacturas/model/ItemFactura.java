@@ -1,4 +1,4 @@
-package org.gabyproject.appfacturas.model;
+package org.gabyproject.poo.appfacturas.model;
 
 public class ItemFactura {
     private int cantidad;

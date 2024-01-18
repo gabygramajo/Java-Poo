@@ -1,4 +1,4 @@
-package interfaces.org.crudrepositorio.model;
+package org.gabyproject.interfaces.crudrepositorio.model;
 
 import java.util.Objects;
 
