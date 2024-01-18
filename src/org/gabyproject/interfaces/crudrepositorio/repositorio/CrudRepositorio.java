@@ -1,18 +1,16 @@
 package org.gabyproject.interfaces.crudrepositorio.repositorio;
 
-import org.gabyproject.interfaces.crudrepositorio.model.Cliente;
-
 import java.util.List;
 
-public interface CrudRepositorio {
+public interface CrudRepositorio <T> {
 
-    List<Cliente> listar();
+    List<T> listar();
 
-    Cliente porId(Integer id);
+    T porId(Integer id);
 
-    void crear(Cliente cliente);
+    void crear(T cliente);
 
-    void editar(Cliente cliente);
+    void editar(T cliente);
 
     void eliminar(Integer id);
 

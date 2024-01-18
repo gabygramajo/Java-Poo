@@ -1,11 +1,9 @@
 package org.gabyproject.interfaces.crudrepositorio.repositorio;
 
-import org.gabyproject.interfaces.crudrepositorio.model.Cliente;
-
 import java.util.List;
 
-public interface OrdenableRepositorio {
+public interface OrdenableRepositorio<T> {
 
-    List<Cliente> listar(String campo, Direccion dir);
+    List<T> listar(String campo, Direccion dir);
 
 }

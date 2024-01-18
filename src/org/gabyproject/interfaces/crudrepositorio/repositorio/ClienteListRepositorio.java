@@ -5,37 +5,7 @@ import org.gabyproject.interfaces.crudrepositorio.model.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio {
-
-    private List<Cliente> dataSource;
-
-    public ClienteListRepositorio() {
-        this.dataSource = new ArrayList<>();
-    }
-
-    @Override
-    public List<Cliente> listar() {
-        return dataSource;
-    }
-
-    @Override
-    public Cliente porId(Integer id) {
-        Cliente resultado = null;
-
-        for ( Cliente cli : dataSource) {
-            if (cli.getId() != null && cli.getId().equals(id)) {
-                resultado = cli;
-                break;
-            }
-        }
-
-        return resultado;
-    }
-
-    @Override
-    public void crear(Cliente cliente) {
-        this.dataSource.add(cliente);
-    }
+public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
 
     @Override
     public void editar(Cliente cliente) {
@@ -44,11 +14,6 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
         c.setApellido(cliente.getApellido());
     }
 
-    @Override
-    public void eliminar(Integer id) {
-        Cliente cliente = this.porId(id);
-        this.dataSource.remove(cliente);
-    }
 
     @Override
     public List<Cliente> listar(String campo, Direccion dir) {
@@ -73,10 +38,6 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
         return listaOrdenada;
     }
 
-    @Override
-    public List<Cliente> listar(int desde, int hasta) {
-        return dataSource.subList(desde, hasta);
-    }
 
     public static int ordanar(Cliente a, Cliente b, String campo) {
         int resultado = 0;
@@ -91,8 +52,4 @@ public class ClienteListRepositorio implements OrdenablePaginableCrudRepositorio
         return resultado;
     }
 
-    @Override
-    public int total() {
-        return this.dataSource.size();
-    }
 }
